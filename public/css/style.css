@@ -1,13 +1,225 @@
-html,
-body {
-	height: 100%;
+/* Couleurs */
+:root {
+  --grey-100: #f3f4f6;
+  --grey-200: #e5e7eb;
+  --grey-400: #9ca3af;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0;
+
+
+
+/* Style pour le body */
+body {
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    overflow-y: auto; /* Permet le défilement vertical */
 }
+
+
+
+
+/* Section de la playlist */
+#playlist-info {
+  display: flex;
+  align-items: flex-end; /* Aligne les éléments en haut */
+  gap: 32px; /* 32px de marge à droite de l'image */
+  margin-top: 86px; /* 86px de marge en haut */
+  margin-left: 86px; /* 86px de marge à gauche */
+  margin-bottom: 48px; /* 48px de marge en bas */
+}
+
+#playlist-info img {
+  width: 250px;
+  height: 250px;
+}
+
+
+
+
+
+
+.titre {
+  font-family: 'Noto Sans'; /* Police Noto Sans */
+  font-size: 48px; /* Taille de police 48px */
+  font-weight: bold; /* Gras */
+  line-height: 1.25/60px; /* Hauteur de ligne 60px */
+  margin-bottom: 8px; /* Espacement de 8px après "Hits of the moment" */
+  margin-top: 8px; /* Espacement de 8px après "Hits of the moment" */
+}
+
+.subtitle1 {
+  font-family: 'Noto Sans'; /* Police Noto Sans */
+  font-size: 16px; /* Taille de police 16px */
+  font-weight: bold; /* Gras */
+  line-height: 1.5/24px; /* Hauteur de ligne 1.5 / 24px */
+}
+
+/* Body 1 */
+.body1 {
+  font-family: 'Noto Sans';
+  font-size: 16px; /* Taille de police 16px */
+  font-weight: normal; /* Normal */
+  line-height: 1.5/24px; /* Hauteur de ligne 1.5 / 24px */
+  margin: 0px;
+}
+
+/* Subtitle 2 */
+.subtitle2 {
+  font-family: 'Noto Sans';
+  font-size: 14px; /* Taille de police 14px */
+  font-weight: bold; /* Gras */
+  line-height: 1.5/21px; /* Hauteur de ligne 1.5 / 21px */
+}
+
+/* Body 2 */
+.body2 {
+  font-family: 'Noto Sans';
+  font-size: 14px; /* Taille de police 16px */
+  font-weight: normal; /* Normal */
+  line-height: 1.5/21px; /* Hauteur de ligne 1.5 / 24px */
+}
+
+/* Overline */
+.overline {
+  font-family: 'Noto Sans';
+  font-size: 12px; /* Taille de police 12px */
+  font-weight: normal; /* Normal */
+  line-height: 1.5/18px; /* Hauteur de ligne 1.5 / 18px */
+}
+
+
+
+
+
+
+#song-list {
+  list-style-type: none; /* Retire les puces des listes */
+  padding: 0; /* par défaut ... il y avait 40px*/
+  margin-left: 86px; /* 86px de marge à gauche */
+}
+
+#song-list li {
+  margin-bottom: 32px; /* Ajoute un espacement de 32px sous chaque élément <li> */
+}
+
+#song-list p {
+  margin: 16px; /* Supprime les marges par défaut des paragraphes */
+}
+
+#song-list li:hover {
+  background-color: var(--grey-200); /* Change la couleur de fond au survol */
+}
+
+
+
+
+
+
+
+
+
+
+#player {
+    display: flex;
+    justify-content: space-between; /* Espace le groupe image+détails et les contrôles/logo */
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px; /* Hauteur fixe du lecteur */
+    background-color: rgba(255, 255, 255, 1); /* Fond blanc opaque */
+    border-top: 1px solid var(--grey-200); /* Trait séparateur au-dessus */
+}
+
+/* Groupe image + détails de la chanson */
+#song-info {
+    display: flex;
+    align-items: center; /* Aligne l'image et les détails verticalement */
+}
+
+#song-info img {
+    height: 80px; /* Ajuste la hauteur automatiquement */
+    width: auto; /* Conserve le ratio de l'image */
+    margin-right: 16px; /* Espace entre l'image et les détails */
+    flex-shrink: 0; /* Empêche l'image de se rétrécir trop dans des petits espaces */
+}
+
+#song-details {
+    display: flex;
+    flex-direction: column; /* Aligne le titre et l'artiste en colonne */
+    line-height: 0; /* Ajuste l'espacement entre les lignes */
+}
+
+
+
+/* Boutons de contrôle */
+#button {
+    display: flex;
+    align-items: center; /* Centre les boutons verticalement */
+}
+
+#button img {
+    width: 40px; /* Taille des icônes de contrôle */
+    height: 40px;
+    margin-left: 32px; /* Espace entre chaque bouton */
+}
+
+
+
+/* Section "Powered by" */
+#powered-by {
+    position: relative; /* Nécessaire pour positionner le texte par rapport à l'image */
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+/* Texte "Powered by" */
+#powered-by span {
+    position: absolute; /* Positionne le texte par-dessus l'image */
+    top: 0; /* En haut de l'image */
+    left: 0; /* Aligné à gauche */
+    padding: 4px; /* Petit padding pour éloigner légèrement le texte des bords */
+}
+
+/* Image de la section "Powered by" */
+#powered-by img {
+    height: 80px; /* Ajuste la hauteur automatiquement */
+    width: auto; /* Conserve le ratio de l'image */
+    margin-right: 16px; /* Espace entre l'image et les détails */
+    flex-shrink: 0; /* Empêche l'image de se rétrécir trop dans des petits espaces */
+}
+
+
+
+
+
+
+/* File d'attente */
+#queue {
+  position: fixed; /* Positionne la file d'attente à droite */
+  right: 0; /* Collée à droite de l'écran */
+  top: 0; /* Commence en haut de la page */
+  width: 330px; /* Largeur fixe de 330px */
+  height: calc(100vh - 80px); /* Hauteur ajustée pour s'arrêter au-dessus du player */
+  background-color: var(--grey-100); /* Fond gris clair */
+  border-left: 1px solid var(--grey-200); /* Bordure gauche en gris plus foncé */
+  display: flex;
+  flex-direction: column;
+  z-index: 10; /* Derrière le player */
+}
+
+
+/* Texte "Play next · 0 tracks" en haut */
+#queue .body1:first-child {
+  padding-top: 32px; /* Espace en haut */
+  padding-left: 32px; /* Espace à gauche */
+}
+
+/* Texte "The queue is empty" centré verticalement et en gris clair */
+#queue .body1:last-child {
+  color: var(--grey-400); /* Texte gris clair */
+  text-align: center; /* Centré horizontalement */
+  margin-top: auto; /* Centre verticalement */
+  margin-bottom: auto;
+}
+

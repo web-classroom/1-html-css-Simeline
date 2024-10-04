@@ -1,40 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="/css/normalize.css" />
-		<link rel="stylesheet" href="/css/style.css" />
-		<title>Hits of the moment | Music player</title>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hits of the moment | Music player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  
 	<body>
 		<main>
-			<section id="playlist-info">
-				<img src="/images/2098157264.jpeg" />
-				Playlist Hits of the moment By Fábio - Deezer Pop Editor 2016 · 60 songs
-				· 162 minutes
-			</section>
-			Stay The Kid Laroi INDUSTRY BABY Lil Nas X Woman Doja Cat Bad Habits Ed
-			Sheeran Way 2 Sexy Drake Pepas Farruko Take My Breath The Weeknd Happier
-			Than Ever Billie Eilish
+    <section id="playlist-info">
+        <img src="/images/2098157264.jpeg" alt="Couverture de la playlist" />
+        <div id="details">
+		  <p class="body1">Playlist</p>
+          <p class="titre">Hits of the moment</p>
+          <p class="body1">By Fábio - Deezer Pop Editor</p>
+          <p class="body1">2016 · 60 songs · 162 minutes</p>
+        </div>
+      </section>
+
+
+	<!-- Liste des chansons -->
+	<ul id="song-list">
+		<li>
+		<p class="subtitle1">Stay</p>
+		<p class="body1">The Kid Laroi</p>
+		</li>
+		<li>
+		<p class="subtitle1">INDUSTRY BABY</p>
+		<p class="body1">Lil Nas X</p>
+		</li>
+		<li>
+		<p class="subtitle1">Woman</p>
+		<p class="body1">Doja Cat</p>
+		</li>
+		<li>
+		<p class="subtitle1">Bad Habits</p>
+		<p class="body1">Ed Sheeran</p>
+		</li>
+		<li>
+		<p class="subtitle1">Way 2 Sexy</p>
+		<p class="body1">Drake</p>
+		</li>
+		<li>
+		<p class="subtitle1">Pepas</p>
+		<p class="body1">Farruko</p>
+		</li>
+	</ul>
 		</main>
 
-		<aside id="player">
-			<img src="/images/242430582.jpeg" alt="Stay" />
-			STAY The Kid Laroi
+<aside id="player">
+    <!-- Image et détails de la chanson groupés -->
+    <div id="song-info">
+        <img src="/images/242430582.jpeg" alt="Stay" />
+        <div id="song-details">
+            <p class="subtitle2">STAY</p>
+            <p class="body2">The Kid Laroi</p>
+        </div>
+    </div>
+
+	<div id="button">
+
 
 			<img src="/icons/skip_previous.svg" alt="Skip Previous" />
 			<img src="/icons/pause.svg" alt="Pause" />
 			<img src="/icons/skip_next.svg" alt="Skip Next" />
+	</div>
 
-			Powered by
-			<img src="/images/deezer-logo.svg" alt="Deezer logo" />
+      <div id="powered-by">
+        <span>Powered by</span>
+        <img src="/images/deezer-logo.svg" alt="Deezer logo" />
+      </div>
 		</aside>
 
-		<aside id="queue">Play next · 0 tracks This queue is empty</aside>
+		<aside id="queue">
+		<p class="body1">Play next · 0 tracks</p>
+		<p class="body1">The queue is empty</p>
+		</aside>
 	</body>
 </html>
