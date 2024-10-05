@@ -171,7 +171,6 @@ body {
 
 
 
-
 /* Section "Powered by" */
 #powered-by {
     position: relative; /* Nécessaire pour positionner le texte par rapport à l'image */
@@ -223,11 +222,12 @@ body {
   padding-left: 32px; /* Espace à gauche */
 }
 
-/* Texte "The queue is empty" centré verticalement et en gris clair */
 #queue .body1:last-child {
   color: var(--grey-400); /* Texte gris clair */
-  text-align: center; /* Centré horizontalement */
-  margin-top: auto; /* Centre verticalement */
-  margin-bottom: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+  padding:0;
 }
-
