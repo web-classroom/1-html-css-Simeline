@@ -38,52 +38,55 @@ body {
 
 
 .titre {
-  font-family: 'Noto Sans'; /* Police Noto Sans */
+  font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
   font-size: 48px; /* Taille de police 48px */
   font-weight: bold; /* Gras */
-  line-height: 1.25/60px; /* Hauteur de ligne 60px */
+  line-height: 60px; /* Hauteur de ligne 60px */
   margin-bottom: 8px; /* Espacement de 8px après "Hits of the moment" */
   margin-top: 8px; /* Espacement de 8px après "Hits of the moment" */
 }
 
 .subtitle1 {
-  font-family: 'Noto Sans'; /* Police Noto Sans */
+  font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
   font-size: 16px; /* Taille de police 16px */
   font-weight: bold; /* Gras */
-  line-height: 1.5/24px; /* Hauteur de ligne 1.5 / 24px */
+  line-height: 24px; /* Hauteur de ligne 1.5 / 24px */
+  margin: 0; /* Supprime les marges par défaut */
 }
 
 /* Body 1 */
 .body1 {
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
   font-size: 16px; /* Taille de police 16px */
   font-weight: normal; /* Normal */
-  line-height: 1.5/24px; /* Hauteur de ligne 1.5 / 24px */
-  margin: 0px;
+  line-height: 24px; /* Hauteur de ligne 1.5 / 24px */
+  margin: 0;
 }
 
 /* Subtitle 2 */
 .subtitle2 {
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
   font-size: 14px; /* Taille de police 14px */
   font-weight: bold; /* Gras */
-  line-height: 1.5/21px; /* Hauteur de ligne 1.5 / 21px */
+  line-height: 21px; /* Hauteur de ligne 1.5 / 21px */
+  margin: 0; /* Supprime les marges par défaut */
 }
 
 /* Body 2 */
 .body2 {
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
   font-size: 14px; /* Taille de police 16px */
   font-weight: normal; /* Normal */
-  line-height: 1.5/21px; /* Hauteur de ligne 1.5 / 24px */
+  line-height: 21px; /* Hauteur de ligne 1.5 / 24px */
+  margin: 0; /* Supprime les marges par défaut */
 }
 
 /* Overline */
 .overline {
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
   font-size: 12px; /* Taille de police 12px */
   font-weight: normal; /* Normal */
-  line-height: 1.5/18px; /* Hauteur de ligne 1.5 / 18px */
+  line-height: 18px; /* Hauteur de ligne 1.5 / 18px */
 }
 
 
@@ -91,21 +94,21 @@ body {
 
 
 
-#song-list {
+#playlist-songs {
   list-style-type: none; /* Retire les puces des listes */
   padding: 0; /* par défaut ... il y avait 40px*/
   margin-left: 86px; /* 86px de marge à gauche */
 }
 
-#song-list li {
+#playlist-songs li {
   margin-bottom: 32px; /* Ajoute un espacement de 32px sous chaque élément <li> */
 }
 
-#song-list p {
-  margin: 16px; /* Supprime les marges par défaut des paragraphes */
+#playlist-songs p {
+  margin: 4px; /* Supprime les marges par défaut des paragraphes */
 }
 
-#song-list li:hover {
+#playlist-songs li:hover {
   background-color: var(--grey-200); /* Change la couleur de fond au survol */
 }
 
@@ -139,7 +142,6 @@ body {
 #song-info img {
     height: 80px; /* Ajuste la hauteur automatiquement */
     width: auto; /* Conserve le ratio de l'image */
-    margin-right: 16px; /* Espace entre l'image et les détails */
     flex-shrink: 0; /* Empêche l'image de se rétrécir trop dans des petits espaces */
 }
 
@@ -147,21 +149,26 @@ body {
     display: flex;
     flex-direction: column; /* Aligne le titre et l'artiste en colonne */
     line-height: 0; /* Ajuste l'espacement entre les lignes */
+    margin-left: 16px; /* Espace entre l'image et les détails */
 }
 
 
 
-/* Boutons de contrôle */
 #button {
     display: flex;
+    justify-content: center; /* Centre les boutons horizontalement */
     align-items: center; /* Centre les boutons verticalement */
+    gap: 32px; /* Espace entre chaque bouton */
 }
 
 #button img {
-    width: 40px; /* Taille des icônes de contrôle */
+    margin: 0; /* Supprime toute marge */
+    padding: 0; /* Supprime tout padding */
+    width: 40px; /* Assure que les icônes ont une taille cohérente */
     height: 40px;
-    margin-left: 32px; /* Espace entre chaque bouton */
 }
+
+
 
 
 
@@ -179,6 +186,7 @@ body {
     top: 0; /* En haut de l'image */
     left: 0; /* Aligné à gauche */
     padding: 4px; /* Petit padding pour éloigner légèrement le texte des bords */
+    line-height: 18px; /* Définir la hauteur de ligne attendue */
 }
 
 /* Image de la section "Powered by" */
