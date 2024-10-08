@@ -12,7 +12,8 @@
 body {
     overflow-x: hidden; /* Empêche le défilement horizontal */
     overflow-y: auto; /* Permet le défilement vertical */
-}
+    padding-bottom: 32px; /* Ajoute un padding en bas pour éviter que le contenu ne soit masqué par le lecteur */
+  }
 
 
 
@@ -93,11 +94,12 @@ body {
 
 
 
-
 #playlist-songs {
-  list-style-type: none; /* Retire les puces des listes */
-  padding: 0; /* par défaut ... il y avait 40px*/
-  margin-left: 86px; /* 86px de marge à gauche */
+  list-style-type: none;
+  padding: 0px;
+  margin-left: 102px;
+  max-height: calc(100vh - 200px); /* Limite la hauteur de la liste, en prenant en compte le header et le player en bas */
+  overflow-y: auto; /* Ajoute un défilement si le contenu dépasse la hauteur maximale */
 }
 
 #playlist-songs li {
@@ -109,9 +111,8 @@ body {
 }
 
 #playlist-songs li:hover {
-  background-color: var(--grey-200); /* Change la couleur de fond au survol */
+  background-color: var(--grey-100); /* Change la couleur de fond au survol */
 }
-
 
 
 
@@ -122,79 +123,68 @@ body {
 
 
 #player {
-    display: flex;
-    justify-content: space-between; /* Espace le groupe image+détails et les contrôles/logo */
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 80px;
     position: fixed;
     bottom: 0;
-    width: 100%;
-    height: 80px; /* Hauteur fixe du lecteur */
-    background-color: rgba(255, 255, 255, 1); /* Fond blanc opaque */
-    border-top: 1px solid var(--grey-200); /* Trait séparateur au-dessus */
+    left: 0;
+    border-top: 1px solid var(--grey-200) ;
+    background-color: white;
 }
 
-/* Groupe image + détails de la chanson */
 #song-info {
     display: flex;
-    align-items: center; /* Aligne l'image et les détails verticalement */
+    align-items: center;
+    height: inherit; /* L'image hérite de la hauteur de son parent */
 }
 
 #song-info img {
-    height: 80px; /* Ajuste la hauteur automatiquement */
-    width: auto; /* Conserve le ratio de l'image */
-    flex-shrink: 0; /* Empêche l'image de se rétrécir trop dans des petits espaces */
+    height: inherit; /* L'image hérite de la hauteur de son parent */
 }
 
 #song-details {
-    display: flex;
-    flex-direction: column; /* Aligne le titre et l'artiste en colonne */
-    line-height: 0; /* Ajuste l'espacement entre les lignes */
-    margin-left: 16px; /* Espace entre l'image et les détails */
+    margin-left: 16px;
+    
 }
-
 
 
 #button {
     display: flex;
-    justify-content: center; /* Centre les boutons horizontalement */
-    align-items: center; /* Centre les boutons verticalement */
-    gap: 32px; /* Espace entre chaque bouton */
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
 }
 
 #button img {
-    margin: 0; /* Supprime toute marge */
-    padding: 0; /* Supprime tout padding */
-    width: 40px; /* Assure que les icônes ont une taille cohérente */
+    width: 40px;
     height: 40px;
+    cursor: pointer;
 }
 
-
-
-
-/* Section "Powered by" */
 #powered-by {
-    position: relative; /* Nécessaire pour positionner le texte par rapport à l'image */
-    display: flex;
-    align-items: center;
-    font-size: 12px;
+  display: flex;
+  flex-direction: column; /* Aligne le span au-dessus de l'image */
+  align-items: flex-end; /* Aligne à gauche les deux éléments */
+  justify-content: center; /* Aligne tout à droite du parent */
+  padding-right: 16px; /* Ajoute de l'espace à droite */
 }
 
 /* Texte "Powered by" */
 #powered-by span {
-    position: absolute; /* Positionne le texte par-dessus l'image */
-    top: 0; /* En haut de l'image */
-    left: 0; /* Aligné à gauche */
-    padding: 4px; /* Petit padding pour éloigner légèrement le texte des bords */
-    line-height: 18px; /* Définir la hauteur de ligne attendue */
+  display: flex;
+  font-size: 12px;
+  line-height: 18px;
 }
 
-/* Image de la section "Powered by" */
 #powered-by img {
-    height: 80px; /* Ajuste la hauteur automatiquement */
-    width: auto; /* Conserve le ratio de l'image */
-    margin-right: 16px; /* Espace entre l'image et les détails */
-    flex-shrink: 0; /* Empêche l'image de se rétrécir trop dans des petits espaces */
+    height: 30px;
 }
+
+
+
+
 
 
 
