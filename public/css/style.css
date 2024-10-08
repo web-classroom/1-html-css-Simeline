@@ -1,223 +1,186 @@
 /* Couleurs */
 :root {
-  --grey-100: #f3f4f6;
-  --grey-200: #e5e7eb;
-  --grey-400: #9ca3af;
+	--grey-100: #f3f4f6;
+	--grey-200: #e5e7eb;
+	--grey-400: #9ca3af;
 }
-
-
-
 
 /* Style pour le body */
 body {
-    overflow-x: hidden; /* Empêche le défilement horizontal */
-    overflow-y: auto; /* Permet le défilement vertical */
-    padding-bottom: 32px; /* Ajoute un padding en bas pour éviter que le contenu ne soit masqué par le lecteur */
-  }
-
-
-
+	overflow-x: hidden; /* Empêche le défilement horizontal */
+	overflow-y: auto; /* Permet le défilement vertical */
+}
 
 /* Section de la playlist */
 #playlist-info {
-  display: flex;
-  align-items: flex-end; /* Aligne les éléments en haut */
-  gap: 32px; /* 32px de marge à droite de l'image */
-  margin-top: 86px; /* 86px de marge en haut */
-  margin-left: 86px; /* 86px de marge à gauche */
-  margin-bottom: 48px; /* 48px de marge en bas */
+	display: flex;
+	align-items: flex-end; /* Aligne les éléments en haut */
+	gap: 32px; /* 32px de marge à droite de l'image */
+	margin-top: 86px; /* 86px de marge en haut */
+	margin-left: 86px; /* 86px de marge à gauche */
+	margin-bottom: 48px; /* 48px de marge en bas */
 }
 
 #playlist-info img {
-  width: 250px;
-  height: 250px;
+	width: 250px;
+	height: 250px;
 }
 
-
-
-
-
-
 .titre {
-  font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
-  font-size: 48px; /* Taille de police 48px */
-  font-weight: bold; /* Gras */
-  line-height: 60px; /* Hauteur de ligne 60px */
-  margin-bottom: 8px; /* Espacement de 8px après "Hits of the moment" */
-  margin-top: 8px; /* Espacement de 8px après "Hits of the moment" */
+	font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
+	font-size: 48px; /* Taille de police 48px */
+	font-weight: bold; /* Gras */
+	line-height: 60px; /* Hauteur de ligne 60px */
+	margin-bottom: 8px; /* Espacement de 8px après "Hits of the moment" */
+	margin-top: 8px; /* Espacement de 8px après "Hits of the moment" */
 }
 
 .subtitle1 {
-  font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
-  font-size: 16px; /* Taille de police 16px */
-  font-weight: bold; /* Gras */
-  line-height: 24px; /* Hauteur de ligne 1.5 / 24px */
-  margin: 0; /* Supprime les marges par défaut */
+	font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
+	font-size: 16px; /* Taille de police 16px */
+	font-weight: bold; /* Gras */
+	line-height: 24px; /* Hauteur de ligne 1.5 / 24px */
+	margin: 0; /* Supprime les marges par défaut */
 }
 
 /* Body 1 */
 .body1 {
-  font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
-  font-size: 16px; /* Taille de police 16px */
-  font-weight: normal; /* Normal */
-  line-height: 24px; /* Hauteur de ligne 1.5 / 24px */
-  margin: 0;
+	font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
+	font-size: 16px; /* Taille de police 16px */
+	font-weight: normal; /* Normal */
+	line-height: 24px; /* Hauteur de ligne 1.5 / 24px */
+	margin: 0;
 }
 
 /* Subtitle 2 */
 .subtitle2 {
-  font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
-  font-size: 14px; /* Taille de police 14px */
-  font-weight: bold; /* Gras */
-  line-height: 21px; /* Hauteur de ligne 1.5 / 21px */
-  margin: 0; /* Supprime les marges par défaut */
+	font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
+	font-size: 14px; /* Taille de police 14px */
+	font-weight: bold; /* Gras */
+	line-height: 21px; /* Hauteur de ligne 1.5 / 21px */
+	margin: 0; /* Supprime les marges par défaut */
 }
 
 /* Body 2 */
 .body2 {
-  font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
-  font-size: 14px; /* Taille de police 16px */
-  font-weight: normal; /* Normal */
-  line-height: 21px; /* Hauteur de ligne 1.5 / 24px */
-  margin: 0; /* Supprime les marges par défaut */
+	font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
+	font-size: 14px; /* Taille de police 16px */
+	font-weight: normal; /* Normal */
+	line-height: 21px; /* Hauteur de ligne 1.5 / 24px */
+	margin: 0; /* Supprime les marges par défaut */
 }
 
 /* Overline */
 .overline {
-  font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
-  font-size: 12px; /* Taille de police 12px */
-  font-weight: normal; /* Normal */
-  line-height: 18px; /* Hauteur de ligne 1.5 / 18px */
+	font-family: "Noto Sans", sans-serif; /* Définit la police attendue */
+	font-size: 12px; /* Taille de police 12px */
+	font-weight: normal; /* Normal */
+	line-height: 18px; /* Hauteur de ligne 1.5 / 18px */
 }
 
-
-
-
-
 #playlist-songs {
-  list-style-type: none;
-  padding: 0px;
-  margin-left: 102px;
-  max-height: calc(100vh - 200px); /* Limite la hauteur de la liste, en prenant en compte le header et le player en bas */
-  overflow-y: auto; /* Ajoute un défilement si le contenu dépasse la hauteur maximale */
+	list-style-type: none; /* Supprime les points de la liste */
+	padding: 0px;
+	padding-bottom: 32px; /* Ajoute un padding en bas pour éviter que le contenu ne soit masqué par le lecteur */
+	margin-left: 102px;
 }
 
 #playlist-songs li {
-  margin-bottom: 32px; /* Ajoute un espacement de 32px sous chaque élément <li> */
+	margin-bottom: 32px; /* Ajoute un espacement de 32px sous chaque élément <li> */
 }
 
 #playlist-songs p {
-  margin: 4px; /* Supprime les marges par défaut des paragraphes */
+	margin: 4px; /* Supprime les marges par défaut des paragraphes */
 }
 
 #playlist-songs li:hover {
-  background-color: var(--grey-100); /* Change la couleur de fond au survol */
+	background-color: var(--grey-100); /* Change la couleur de fond au survol */
 }
 
-
-
-
-
-
-
-
-
 #player {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    border-top: 1px solid var(--grey-200) ;
-    background-color: white;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr; /* Séparation en 3 parties équitables */
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	border-top: 1px solid var(--grey-200);
+	background-color: white;
 }
 
 #song-info {
-    display: flex;
-    align-items: center;
-    height: inherit; /* L'image hérite de la hauteur de son parent */
+	display: flex;
+	align-items: center;
+	height: inherit; /* L'image hérite de la hauteur de son parent */
 }
 
 #song-info img {
-    height: inherit; /* L'image hérite de la hauteur de son parent */
+	height: inherit; /* L'image hérite de la hauteur de son parent */
 }
 
 #song-details {
-    margin-left: 16px;
-    
+	margin-left: 16px;
 }
 
-
 #button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
 }
 
 #button img {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
 }
 
 #powered-by {
-  display: flex;
-  flex-direction: column; /* Aligne le span au-dessus de l'image */
-  align-items: flex-end; /* Aligne à gauche les deux éléments */
-  justify-content: center; /* Aligne tout à droite du parent */
-  padding-right: 16px; /* Ajoute de l'espace à droite */
+	display: flex;
+	flex-direction: column; /* Aligne le span au-dessus de l'image */
+	align-items: flex-end; /* Aligne à gauche les deux éléments */
+	justify-content: center; /* Aligne tout à droite du parent */
+	padding-right: 16px; /* Ajoute de l'espace à droite */
 }
 
 /* Texte "Powered by" */
 #powered-by span {
-  display: flex;
-  font-size: 12px;
-  line-height: 18px;
+	display: flex;
 }
 
 #powered-by img {
-    height: 30px;
+	height: 30px;
 }
-
-
-
-
-
-
-
-
-
 
 /* File d'attente */
 #queue {
-  position: fixed; /* Positionne la file d'attente à droite */
-  right: 0; /* Collée à droite de l'écran */
-  top: 0; /* Commence en haut de la page */
-  width: 330px; /* Largeur fixe de 330px */
-  height: calc(100vh - 80px); /* Hauteur ajustée pour s'arrêter au-dessus du player */
-  background-color: var(--grey-100); /* Fond gris clair */
-  border-left: 1px solid var(--grey-200); /* Bordure gauche en gris plus foncé */
-  display: flex;
-  flex-direction: column;
-  z-index: 10; /* Derrière le player */
+	position: fixed; /* Positionne la file d'attente à droite */
+	right: 0; /* Collée à droite de l'écran */
+	top: 0; /* Commence en haut de la page */
+	width: 330px; /* Largeur fixe de 330px */
+	height: calc(
+		100vh - 80px
+	); /* Hauteur ajustée pour s'arrêter au-dessus du player */
+	background-color: var(--grey-100); /* Fond gris clair */
+	border-left: 1px solid var(--grey-200); /* Bordure gauche en gris plus foncé */
+	display: flex;
+	flex-direction: column;
 }
-
 
 /* Texte "Play next · 0 tracks" en haut */
 #queue .body1:first-child {
-  padding-top: 32px; /* Espace en haut */
-  padding-left: 32px; /* Espace à gauche */
+	padding-top: 32px; /* Espace en haut */
+	padding-left: 32px; /* Espace à gauche */
 }
 
 #queue .body1:last-child {
-  color: var(--grey-400); /* Texte gris clair */
+	color: var(--grey-400); /* Texte gris clair */
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
-  padding:0;
+	padding: 0;
 }
